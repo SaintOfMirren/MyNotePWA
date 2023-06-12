@@ -19,15 +19,15 @@ module.exports = () => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: './src/index.html',
+        template: './index.html',
         filename: 'index.html',
         chunks: ['main'],
       }),
-      new HtmlWebpackPlugin({
-        template: './src/install.html',
-        filename: 'install.html',
-        chunks: ['install'],
-      }),
+      // new HtmlWebpackPlugin({
+      //   template: './src/install.html',
+      //   filename: 'install.html',
+      //   chunks: ['install'],
+      // }),
       new WebpackPwaManifest({
         name: 'JATE',
         short_name: 'Jate',
@@ -43,7 +43,7 @@ module.exports = () => {
         ],
       }),
       new InjectManifest({
-        swSrc: './src/service-worker.js',
+        swSrc: './src-sw.js',
         swDest: 'service-worker.js',
       }),
     ],
