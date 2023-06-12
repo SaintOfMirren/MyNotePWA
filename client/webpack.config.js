@@ -29,14 +29,14 @@ module.exports = () => {
         chunks: ['install'],
       }),
       new WebpackPwaManifest({
-        name: 'Your App Name',
-        short_name: 'App',
-        description: 'Your app description',
+        name: 'JATE',
+        short_name: 'Jate',
+        description: 'PWA Text Editor',
         background_color: '#ffffff',
         theme_color: '#31a9e1',
         icons: [
           {
-            src: path.resolve('./src/images/icon.png'),
+            src: path.resolve('./src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512], // Adjust the sizes as needed
             destination: path.join('assets', 'icons'),
           },
